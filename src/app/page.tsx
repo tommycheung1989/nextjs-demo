@@ -5,6 +5,9 @@ import Link from "next/link";
 import Profile from "./components/profile";
 
 export default function Home() {
+  const connection = io();
+  connection.on("connection", () => {});
+  const pages = [1, 2, 3, 4, 5, 6];
   return (
     <main className="flex justify-center p-4">
       <head>
